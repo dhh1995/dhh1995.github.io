@@ -1,0 +1,92 @@
+site_name: Honghua Dong's Personal Website
+site_description: "Personal Website of Honghua Dong"
+watch: [docs]
+
+nav:
+  - Home: index.md
+  - Publications: all_pubs.md
+
+theme:
+  name: "material"
+  features:
+  - announce.dismiss
+  - content.action.edit
+  - content.action.view
+  - content.code.annotate
+  - content.code.copy
+  - content.tooltips
+  # - navigation.footer
+  # - navigation.indexes
+  - navigation.sections
+  - navigation.tabs
+  - navigation.tabs.sticky
+  - navigation.top
+  - search.highlight
+  - search.suggest
+  - toc.follow
+  palette:
+  - media: "(prefers-color-scheme)"
+    toggle:
+      icon: material/brightness-auto
+      name: Switch to light mode
+  - media: "(prefers-color-scheme: light)"
+    scheme: default
+    primary: teal
+    accent: purple
+    toggle:
+      icon: material/weather-sunny
+      name: Switch to dark mode
+  - media: "(prefers-color-scheme: dark)"
+    scheme: slate
+    primary: black
+    accent: lime
+    toggle:
+      icon: material/weather-night
+      name: Switch to system preference
+
+
+markdown_extensions:
+- attr_list
+- admonition
+- callouts
+- footnotes
+- pymdownx.details
+- pymdownx.emoji:
+    emoji_index: !!python/name:material.extensions.emoji.twemoji
+    emoji_generator: !!python/name:material.extensions.emoji.to_svg
+- pymdownx.highlight:
+    pygments_lang_class: true
+- pymdownx.inlinehilite:
+    style_plain_text: python
+- pymdownx.magiclink
+- pymdownx.snippets:
+    base_path: [!relative $config_dir]
+    check_paths: true
+- pymdownx.superfences
+- pymdownx.tabbed:
+    alternate_style: true
+    slugify: !!python/object/apply:pymdownx.slugs.slugify
+      kwds:
+        case: lower
+- pymdownx.tasklist:
+    custom_checkbox: true
+- pymdownx.tilde
+- toc:
+    permalink: true
+
+plugins:
+  - search
+  - markdown-exec
+  - mkdocs-jupyter
+
+extra:
+  social:
+  - icon: fontawesome/brands/github
+    link: https://github.com/dhh1995
+  - icon: fontawesome/brands/google-scholar
+    link: https://scholar.google.com/citations?user=MrGN4oMAAAAJ
+  - icon: fontawesome/brands/twitter
+    link: https://twitter.com/honghua_dong
+  analytics:
+    provider: google
+    property: G-XVJRPZRN54
